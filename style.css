@@ -35,6 +35,7 @@ button,
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  position: relative;
 }
 
 .navigation-wrapper {
@@ -45,6 +46,53 @@ button,
 #menu-btn {
   border: none;
   background-color: transparent;
+}
+
+/* NAVIAGATION */
+
+.nav-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(0, 0%, 0%, 0.6);
+  z-index: 1;
+  display: none;
+}
+
+.nav-bg.open {
+  display: flex;
+}
+
+.header_nav {
+  background-color: var(--White);
+  height: 100%;
+  width: 300px;
+  padding: 1.5rem;
+}
+
+#close-btn {
+  margin-bottom: 3rem;
+  border: none;
+  background-color: transparent;
+}
+
+.header_nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  font-weight: 700;
+}
+
+.header_nav a {
+  text-decoration: none;
+  color: var(--Black);
+}
+
+.header_nav a:hover {
+  color: var(--Grayish-blue);
 }
 
 .user-account {
