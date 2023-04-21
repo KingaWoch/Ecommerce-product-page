@@ -97,6 +97,7 @@ button,
 
 .user-account {
   display: flex;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -141,11 +142,14 @@ button,
   text-transform: uppercase;
   color: var(--Orange);
   font-weight: 700;
+  font-size: 0.8rem;
   letter-spacing: 2px;
 }
 
 h1 {
   color: var(--Black);
+  font-size: 1.9rem;
+  margin-top: 0.5rem;
 }
 
 .product-text {
@@ -199,6 +203,11 @@ h1 {
 
 .input-field img {
   cursor: pointer;
+  padding: 0.5rem;
+}
+
+.input-field img:hover {
+  opacity: 0.7;
 }
 
 input {
@@ -229,6 +238,10 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
 }
 
+#add-btn:hover {
+  opacity: 0.7;
+}
+
 .attribution {
   font-size: 0.8rem;
   text-align: center;
@@ -237,4 +250,106 @@ input::-webkit-inner-spin-button {
 
 .attribution a {
   color: var(--Orange);
+}
+
+/* CART MODAL */
+
+.cart-btn {
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-badge {
+  background-color: var(--Orange);
+  color: var(--White);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-align: center;
+  width: 17px;
+  height: 12px;
+  border-radius: 0.5rem;
+}
+
+.cart_modal {
+  background-color: var(--White);
+  width: 360px;
+  position: absolute;
+  top: 5rem;
+  right: 0.5rem;
+  z-index: 1;
+  border-radius: 0.8rem;
+  -webkit-box-shadow: 0px 16px 23px -7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 0px 16px 23px -7px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 16px 23px -7px rgba(0, 0, 0, 0.29);
+  display: none;
+}
+
+.cart_modal.open {
+  display: block;
+}
+
+.cart_header {
+  border-bottom: 1px solid var(--Grayish-blue);
+  height: 60px;
+  padding: 1rem;
+  color: var(--Black);
+  font-weight: 700;
+}
+
+.cart_items {
+  min-height: 200px;
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  color: var(--Dark-grayish-blue);
+  font-weight: 700;
+}
+
+.order-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 400;
+}
+
+.product-thumbnail {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 0.4rem;
+}
+
+.product_name-and-value {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.delete-btn {
+  cursor: pointer;
+}
+
+.checkout-btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--Orange);
+  color: var(--White);
+  font-weight: 700;
+}
+
+.checkout-btn:hover {
+  opacity: 0.7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 375px) {
+  .cart_modal {
+    width: calc(100% - 1rem);
+  }
 }
