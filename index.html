@@ -22,93 +22,111 @@
     />
   </head>
   <body>
-    <header class="main-header">
-      <div class="navigation-wrapper">
-        <button id="menu-btn">
-          <img src="images/icon-menu.svg" alt="menu" />
-        </button>
-        <div class="nav-bg">
-          <nav class="header_nav">
-            <button id="close-btn">
-              <img src="images/icon-close.svg" alt="close menu" />
-            </button>
-            <ul>
-              <li><a href="#">Collections</a></li>
-              <li><a href="#">Men</a></li>
-              <li><a href="#">Women</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-        <a href="/"><img src="images/logo.svg" alt="Sneakers" /></a>
-      </div>
-      <div class="user-account">
-        <div class="cart-btn">
-          <img src="images/icon-cart.svg" alt="cart" />
-        </div>
-        <div class="cart_modal">
-          <div class="cart_header"><span>Cart</span></div>
-          <div class="cart_items">
-            <p>Your cart is empty</p>
+    <div class="page">
+      <header class="main-header">
+        <div class="navigation-wrapper">
+          <button id="menu-btn">
+            <img src="images/icon-menu.svg" alt="menu" />
+          </button>
+          <div class="nav-bg">
+            <nav class="header_nav">
+              <button id="close-btn">
+                <img src="images/icon-close.svg" alt="close menu" />
+              </button>
+              <ul>
+                <li>
+                  <a href="#">Collections</a><span class="border-bottom"></span>
+                </li>
+                <li><a href="#">Men</a><span class="border-bottom"></span></li>
+                <li>
+                  <a href="#">Women</a><span class="border-bottom"></span>
+                </li>
+                <li>
+                  <a href="#">About</a><span class="border-bottom"></span>
+                </li>
+                <li>
+                  <a href="#">Contact</a><span class="border-bottom"></span>
+                </li>
+              </ul>
+            </nav>
           </div>
+          <a href="/"><img src="images/logo.svg" alt="Sneakers" /></a>
         </div>
-        <div class="avatar">
-          <img src="images/image-avatar.png" alt="avatar" />
-        </div>
-      </div>
-    </header>
-    <main>
-      <section class="product-details">
-        <div class="slider">
-          <div class="arrow left-arrow">
-            <img src="images/icon-previous.svg" alt="show previous image" />
+        <div class="user-account">
+          <div class="cart-btn">
+            <img src="images/icon-cart.svg" alt="cart" />
           </div>
-          <img src="images/image-product-1.jpg" alt="product 1" />
-          <div class="arrow right-arrow">
-            <img src="images/icon-next.svg" alt="show next image" />
-          </div>
-        </div>
-        <article class="product-description">
-          <header>
-            <p class="company">Sneaker Company</p>
-            <h1 class="product-name">Fall Limited Edition Sneakers</h1>
-          </header>
-          <p class="product-text">
-            These low-profile sneakers are your perfect casual wear companion.
-            Featuring a durable rubber outer sole, they'll withstand everything
-            the weather can offer.
-          </p>
-          <div class="prices">
-            <p class="current-price">
-              <span class="price">$125.00 </span
-              ><span class="discount">50%</span>
-            </p>
-            <span class="original-price">$250.00</span>
-          </div>
-          <div class="adding-to-cart">
-            <div class="input-field">
-              <img id="minus" src="images/icon-minus.svg" alt="minus" />
-              <input id="number" type="number" value="0" />
-              <img id="plus" src="images/icon-plus.svg" alt="plus" />
+          <div class="cart_modal">
+            <div class="cart_header"><span>Cart</span></div>
+            <div class="cart_items">
+              <p>Your cart is empty</p>
             </div>
-            <button id="add-btn">
-              <img src="images/icon-cart-white.svg" alt="Add to cart" />Add to
-              cart
-            </button>
           </div>
-        </article>
-      </section>
-    </main>
-    <footer class="attribution">
-      <p>
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by
-        <a href="https://github.com/KingaWoch" target="_blank">Kinga Woch</a>.
-      </p>
-    </footer>
+          <div class="avatar">
+            <img src="images/image-avatar.png" alt="avatar" />
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="product-details">
+          <div class="slider-wrapper">
+            <div class="slider">
+              <div class="arrow left-arrow">
+                <img src="images/icon-previous.svg" alt="show previous image" />
+              </div>
+              <img src="images/image-product-1.jpg" alt="product 1" />
+              <div class="arrow right-arrow">
+                <img src="images/icon-next.svg" alt="show next image" />
+              </div>
+            </div>
+            <div class="thumbnails">
+              <img src="images/image-product-1-thumbnail.jpg" alt="" />
+              <img src="images/image-product-2-thumbnail.jpg" alt="" />
+              <img src="images/image-product-3-thumbnail.jpg" alt="" />
+              <img src="images/image-product-4-thumbnail.jpg" alt="" />
+            </div>
+          </div>
+          <article class="product-description">
+            <header>
+              <p class="company">Sneaker Company</p>
+              <h1 class="product-name">Fall Limited Edition Sneakers</h1>
+            </header>
+            <p class="product-text">
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they'll withstand
+              everything the weather can offer.
+            </p>
+            <div class="prices">
+              <p class="current-price">
+                <span class="price">$125.00 </span
+                ><span class="discount">50%</span>
+              </p>
+              <span class="original-price">$250.00</span>
+            </div>
+            <div class="adding-to-cart">
+              <div class="input-field">
+                <img id="minus" src="images/icon-minus.svg" alt="minus" />
+                <input id="number" type="number" value="0" />
+                <img id="plus" src="images/icon-plus.svg" alt="plus" />
+              </div>
+              <button id="add-btn">
+                <img src="images/icon-cart-white.svg" alt="Add to cart" />Add to
+                cart
+              </button>
+            </div>
+          </article>
+        </section>
+      </main>
+      <footer class="attribution">
+        <p>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/KingaWoch" target="_blank">Kinga Woch</a>.
+        </p>
+      </footer>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
