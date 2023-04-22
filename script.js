@@ -63,8 +63,16 @@ const createOrderDetailsElement = () => {
   const productName = document.createElement("p");
   productName.innerText = productNameValue.innerHTML;
 
+  const totalValue = document.createElement("span");
+  totalValue.classList.add("total-value");
+  const a = currentPrice.innerHTML.replace("$", "");
+  const result = parseFloat(a).toFixed(2) * numberInput.value;
+
+  totalValue.innerText = `$${result.toFixed(2)}`;
+
   const productValue = document.createElement("p");
-  productValue.innerText = `${currentPrice.innerHTML} x ${numberInput.value}`;
+  productValue.innerText = `${currentPrice.innerHTML} x ${numberInput.value} `;
+  productValue.appendChild(totalValue);
 
   const deleteProduct = document.createElement("img");
   deleteProduct.src = "images/icon-delete.svg";

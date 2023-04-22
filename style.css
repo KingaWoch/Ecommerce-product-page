@@ -328,6 +328,11 @@ input::-webkit-inner-spin-button {
   gap: 0.3rem;
 }
 
+.total-value {
+  color: var(--Black);
+  font-weight: 700;
+}
+
 .delete-btn {
   cursor: pointer;
 }
