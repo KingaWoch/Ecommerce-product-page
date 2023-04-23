@@ -174,6 +174,11 @@ thumbnails.forEach((thumbnail) => {
   thumbnail.addEventListener("click", () => {
     changeImage(thumbnail.classList[0]);
   });
+  thumbnail.addEventListener("keydown", (e) => {
+    if (e.code === "Enter" || e.keyCode === 13) {
+      changeImage(thumbnail.classList[0]);
+    }
+  });
 });
 
 arrowLeft.addEventListener("click", () => {
@@ -204,4 +209,26 @@ lightboxThumbnails.forEach((lightboxThumbnail) => {
   lightboxThumbnail.addEventListener("click", () => {
     changeImage(lightboxThumbnail.classList[0]);
   });
+  lightboxThumbnail.addEventListener("keydown", (e) => {
+    if (e.code === "Enter" || e.keyCode === 13) {
+      changeImage(lightboxThumbnail.classList[0]);
+    }
+  });
+});
+
+// KEYBOARD NAVIGATION
+
+document.addEventListener("keydown", (e) => {
+  if (!lightboxGallery.classList.contains("hidden")) {
+    if (e.code === "ArrowRight" || e.keyCode === 39) {
+      changeImage(currentImage + 1);
+    }
+    if (e.code === "ArrowLeft" || e.keyCode === 37) {
+      changeImage(currentImage - 1);
+    }
+
+    if (e.code === "Escape" || e.keyCode === 27) {
+      lightboxGallery.classList.add("hidden");
+    }
+  }
 });
