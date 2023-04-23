@@ -121,3 +121,87 @@ const addItemToCart = () => {
 };
 
 addBtn.addEventListener("click", addItemToCart);
+
+// SHOW AND HIDE LIGHTBOX GALLERY
+
+const productImage = document.querySelectorAll(".product-image img");
+const lightboxGallery = document.querySelector(".lightbox-gallery-bg");
+const closeGalleryBtn = document.querySelector(".close-gallery");
+
+productImage.forEach((image) => {
+  image.addEventListener("click", () => {
+    lightboxGallery.classList.remove("hidden");
+  });
+});
+closeGalleryBtn.addEventListener("click", () => {
+  lightboxGallery.classList.add("hidden");
+});
+
+// SLIDER
+
+const arrowRight = document.querySelector(".right-arrow");
+const arrowLeft = document.querySelector(".left-arrow");
+const images = document.querySelectorAll(".product-image img");
+const thumbnails = document.querySelectorAll(".thumbnails img");
+const lightboxImages = document.querySelectorAll(".lightbox_product-image img");
+
+let currentImage = 0;
+let currentThumbnail = 0;
+
+const changeImage = (n) => {
+  if (n >= images.length) {
+    n = 0;
+  }
+
+  if (n < 0) {
+    n = images.length - 1;
+  }
+
+  images[currentImage].classList.toggle("active");
+  images[n].classList.toggle("active");
+  thumbnails[currentThumbnail].classList.toggle("active");
+  thumbnails[n].classList.toggle("active");
+  lightboxImages[currentImage].classList.toggle("active");
+  lightboxImages[n].classList.toggle("active");
+  lightboxThumbnails[currentThumbnail].classList.toggle("active");
+  lightboxThumbnails[n].classList.toggle("active");
+  currentThumbnail = n;
+  currentImage = n;
+  //console.log(n);
+};
+
+thumbnails.forEach((thumbnail) => {
+  thumbnail.addEventListener("click", () => {
+    changeImage(thumbnail.classList[0]);
+  });
+});
+
+arrowLeft.addEventListener("click", () => {
+  changeImage(currentImage - 1);
+});
+
+arrowRight.addEventListener("click", () => {
+  changeImage(currentImage + 1);
+});
+
+// LIGHTBOX GALLERY - SLIDER
+
+const lightboxArrowLeft = document.querySelector(".gallery-left-arrow");
+const lightboxArrowRight = document.querySelector(".gallery-right-arrow");
+const lightboxThumbnails = document.querySelectorAll(
+  ".lightbox_thumbnail_wrapper"
+);
+
+lightboxArrowLeft.addEventListener("click", () => {
+  changeImage(currentImage - 1);
+});
+
+lightboxArrowRight.addEventListener("click", () => {
+  changeImage(currentImage + 1);
+});
+
+lightboxThumbnails.forEach((lightboxThumbnail) => {
+  lightboxThumbnail.addEventListener("click", () => {
+    changeImage(lightboxThumbnail.classList[0]);
+  });
+});

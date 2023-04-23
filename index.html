@@ -53,9 +53,9 @@
           <a href="/"><img src="images/logo.svg" alt="Sneakers" /></a>
         </div>
         <div class="user-account">
-          <div class="cart-btn">
+          <button class="cart-btn">
             <img src="images/icon-cart.svg" alt="cart" />
-          </div>
+          </button>
           <div class="cart_modal">
             <div class="cart_header"><span>Cart</span></div>
             <div class="cart_items">
@@ -71,19 +71,111 @@
         <section class="product-details">
           <div class="slider-wrapper">
             <div class="slider">
-              <div class="arrow left-arrow">
+              <button class="arrow left-arrow">
                 <img src="images/icon-previous.svg" alt="show previous image" />
+              </button>
+              <div class="product-image">
+                <img
+                  class="active"
+                  src="images/image-product-1.jpg"
+                  alt="product image"
+                />
+                <img src="images/image-product-2.jpg" alt="product image" />
+                <img src="images/image-product-3.jpg" alt="product image" />
+                <img src="images/image-product-4.jpg" alt="product image" />
               </div>
-              <img src="images/image-product-1.jpg" alt="product 1" />
-              <div class="arrow right-arrow">
+              <button class="arrow right-arrow">
                 <img src="images/icon-next.svg" alt="show next image" />
-              </div>
+              </button>
             </div>
             <div class="thumbnails">
-              <img src="images/image-product-1-thumbnail.jpg" alt="" />
-              <img src="images/image-product-2-thumbnail.jpg" alt="" />
-              <img src="images/image-product-3-thumbnail.jpg" alt="" />
-              <img src="images/image-product-4-thumbnail.jpg" alt="" />
+              <img
+                class="0 active"
+                src="images/image-product-1-thumbnail.jpg"
+                alt="product thumbnail"
+              />
+              <img
+                class="1"
+                src="images/image-product-2-thumbnail.jpg"
+                alt="product thumbnail"
+              />
+              <img
+                class="2"
+                src="images/image-product-3-thumbnail.jpg"
+                alt="product thumbnail"
+              />
+              <img
+                class="3"
+                src="images/image-product-4-thumbnail.jpg"
+                alt="product thumbnail"
+              />
+            </div>
+            <div class="lightbox-gallery-bg hidden">
+              <div class="lightbox-gallery">
+                <div class="lightbox_slider">
+                  <button class="close-gallery">
+                    <img
+                      src="images/icon-close-white.svg"
+                      alt="close gallery"
+                    />
+                    <button class="gallery-arrow gallery-left-arrow">
+                      <img
+                        src="images/icon-previous.svg"
+                        alt="show previous image"
+                      />
+                    </button>
+
+                    <div class="lightbox_product-image">
+                      <img
+                        class="active"
+                        src="images/image-product-1.jpg"
+                        alt="product image"
+                      />
+                      <img
+                        src="images/image-product-2.jpg"
+                        alt="product image"
+                      />
+                      <img
+                        src="images/image-product-3.jpg"
+                        alt="product image"
+                      />
+                      <img
+                        src="images/image-product-4.jpg"
+                        alt="product image"
+                      />
+                    </div>
+                    <button class="gallery-arrow gallery-right-arrow">
+                      <img src="images/icon-next.svg" alt="show next image" />
+                    </button>
+                  </button>
+                </div>
+                <div class="lightbox_thumbnails">
+                  <div class="0 lightbox_thumbnail_wrapper active">
+                    <img
+                      src="images/image-product-1-thumbnail.jpg"
+                      alt="product thumbnail"
+                    />
+                  </div>
+                  <div class="1 lightbox_thumbnail_wrapper">
+                    <img
+                      src="images/image-product-2-thumbnail.jpg"
+                      alt="product thumbnail"
+                    />
+                  </div>
+                  <div class="2 lightbox_thumbnail_wrapper">
+                    <img
+                      src="images/image-product-3-thumbnail.jpg"
+                      alt="product thumbnail"
+                    />
+                  </div>
+                  <div class="3 lightbox_thumbnail_wrapper">
+                    <img
+                      src="images/image-product-4-thumbnail.jpg"
+                      alt="product thumbnail"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <article class="product-description">
