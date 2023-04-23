@@ -479,9 +479,7 @@ input::-webkit-inner-spin-button {
   .product-details {
     display: flex;
     align-items: center;
-    gap: 7rem;
     margin-top: 5rem;
-    padding-inline: 2rem;
   }
 
   .slider-wrapper {
@@ -626,5 +624,12 @@ input::-webkit-inner-spin-button {
     align-items: flex-start;
     gap: 0.6rem;
     padding-block: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .product-details {
+    padding-inline: 2rem;
+    gap: 7rem;
   }
 }
